@@ -1,14 +1,15 @@
-//Questo programma è in grado di leggere le ottuple fornite dal run1, legge il primo valore, lo salva su un file
-//chiamato grc_tof_run1.txt e scarta i successivi 7
+//Questo programma è in grado di leggere le ottuple fornite dal run2, legge il primo valore, lo salva su un file
+//chiamato grc_tof_run2_ch1.txt, poi legge il secondo valore e lo salva su un file chiamato "grc_tof_run2_ch2.txt" 
+//e infine scarta i successivi 6 valori.
 
 
 #include <stdio.h>
 
 int main() {
     FILE *inputFile, *outputFile1, *outputFile2;
-    char inputFileName[] = "grc_tof_run5.asc";
-    char outputFileName1[] = "grc_tof_run5_ch1.txt";
-    char outputFileName2[] = "grc_tof_run5_ch2.txt";
+    char inputFileName[] = "grc_tof_run2.asc";
+    char outputFileName1[] = "grc_tof_run2_ch1.txt";
+    char outputFileName2[] = "grc_tof_run2_ch2.txt";
     float value, value1, value2;
     int i;
 
@@ -31,7 +32,7 @@ int main() {
         return 1;
     }
 
-    // Leggo e scarto i successivi 7 valori di ogni ottupla e scrivo il primo valore nel file di output
+    // Leggo e scarto i successivi 6 valori di ogni ottupla e scrivo i valori nei files di output
     while (fscanf(inputFile, "%f", &value1) == 1) {
         fprintf(outputFile1, "%f\n", value1);
         fscanf(inputFile, "%f", &value2);
