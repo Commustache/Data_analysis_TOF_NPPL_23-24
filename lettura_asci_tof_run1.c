@@ -6,8 +6,8 @@
 
 int main() {
     FILE *inputFile, *outputFile;
-    char inputFileName[] = "grc_tof_run4.asc";
-    char outputFileName[] = "grc_tof_run4.txt";
+    char inputFileName[] = "grc_tof_run1.asc"; //just for example
+    char outputFileName[] = "grc_tof_run1.txt"; //just for example
     float value;
     int i;
 
